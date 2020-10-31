@@ -1,0 +1,45 @@
+{
+   "author": "Heilig Defense",
+   "background": {
+      "persistent": true,
+      "scripts": [ "background.min.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "128": "img/cydec128.png",
+         "16": "img/cydec16.png",
+         "32": "img/cydec32.png",
+         "48": "img/cydec48.png"
+      },
+      "default_popup": "popup.html"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "content.min.js" ],
+      "matches": [ "\u003Call_urls>" ],
+      "run_at": "document_start"
+   }, {
+      "all_frames": true,
+      "js": [ "css.min.js" ],
+      "matches": [ "\u003Call_urls>" ],
+      "run_at": "document_end"
+   } ],
+   "description": "Stop trackers from accurately fingerprinting your system through obfuscation and deception.",
+   "icons": {
+      "128": "img/cydec128.png",
+      "16": "img/cydec16.png",
+      "32": "img/cydec32.png",
+      "48": "img/cydec48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAhcTDF6Q9+Ae/s3Wf1mHg/v2a+wxMVo1uF4ULnocFFuLcim6WfAwMrJqOvIddg0Flhr1NztMLyAMwF8yjB5BYzdqSOyODcYPCKEr1XfvgEVk11P6wKVO1UZtpmLur8aJvAg5zD91phVNPmshX/xyrwMk/+ZiAH7oNsqGLM9QJALzgZdesPr1D1VOdEVRmVBeQdC/FupK+8Twm3s4jQpyr1WHtqhKs4yDnWOwsCRxlcUPr9FyGBb940iMaX7UYWoPd+ihVwWjpe3/nqzbLDWS/fP90atfCtr0ez6Ap56xT5lH9gorLYmv2y/2wmf9Y4PrEkgFIiEcP51FTu5fHvyQjNQIDAQAB",
+   "manifest_version": 2,
+   "name": "CyDec Platform Anti-Fingerprinting",
+   "options_ui": {
+      "open_in_tab": true,
+      "page": "options.html"
+   },
+   "permissions": [ "activeTab", "tabs", "storage", "webRequest", "notifications", "webRequestBlocking", "\u003Call_urls>" ],
+   "short_name": "HDCyDec",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.2020.293.1530"
+}

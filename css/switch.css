@@ -1,0 +1,3322 @@
+.tbl-no-borders td {
+	border: 0px;
+}
+
+.switch {
+	font-family: sans-serif;
+	font-weight: 800;
+	position: absolute;
+	/*top: 50%;*/
+	left: 25%;
+	width: 150px;
+	height: 50px;
+	text-align: center;
+	/* margin: -30px 0 0 -75px; */
+	background: #62D0F0;
+	-webkit-transition: all 0.2s ease;
+	-moz-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
+	-ms-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+	border-radius: 25px;
+}
+.switch span {
+	position: absolute;
+	width: 20px;
+	height: 4px;
+	top: 50%;
+	left: 50%;
+	margin: -2px 0px 0px -4px;
+	background: #fff;
+	display: block;
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	-webkit-transition: all 0.2s ease;
+	-moz-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
+	-ms-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+	border-radius: 2px;
+}
+.switch span:after {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 4px;
+	height: 12px;
+	margin-top: -8px;
+	background: #fff;
+	-webkit-transition: all 0.2s ease;
+	-moz-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
+	-ms-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+	border-radius: 2px;
+}
+
+.switch-off {
+	font-family: sans-serif;
+	font-weight: 800;
+	position: absolute;
+	left: 25%;
+	width: 150px;
+	height: 50px;
+	text-align: center;
+	background: #ff3b30;
+	border-radius: 25px;
+}
+.switch-off span {
+	position: absolute;
+	width: 20px;
+	height: 4px;
+	top: 50%;
+	left: 40%;
+	margin: -2px 0px 0px -4px;
+	background: #fff;
+	display: block;
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	-webkit-transition: all 0.2s ease;
+	-moz-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
+	-ms-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+	border-radius: 2px;
+}
+.switch-off span:after {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 4px;
+	height: 12px;
+	margin-top: -8px;
+	background: #fff;
+	-webkit-transition: all 0.2s ease;
+	-moz-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
+	-ms-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+	border-radius: 2px;
+	height: 20px; 
+	/* margin-top: -14px; */
+	margin-left: 8px;
+}
+
+/*
+input[type=radio] {
+display: none;
+}
+*/
+.switch label {
+	cursor: pointer;
+	color: rgba(0,0,0,0.2);
+	width: 60px;
+	line-height: 50px;
+	-webkit-transition: all 0.2s ease;
+	-moz-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
+	-ms-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+}
+
+label[for=yes] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=no] {
+position: absolute;
+right: -10px;
+}
+
+label[for=yesg] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=nog] {
+position: absolute;
+right: -10px;
+}
+
+label[for=yesa] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=noa] {
+position: absolute;
+right: -10px;
+}
+
+label[for=opsRdYes] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=opsRdNo] {
+position: absolute;
+right: -10px;
+}
+
+label[for=opsRandomYes] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=opsRandomNo] {
+position: absolute;
+right: -10px;
+}
+
+label[for=yes1] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=no1] {
+position: absolute;
+right: -10px;
+}
+label[for=yes2] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=no2] {
+position: absolute;
+right: -10px;
+}
+label[for=yes3] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=no3] {
+position: absolute;
+right: -10px;
+}
+label[for=yes4] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=no4] {
+position: absolute;
+right: -10px;
+}
+label[for=yes5] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=no5] {
+position: absolute;
+right: -10px;
+}
+label[for=yes6] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=no6] {
+position: absolute;
+right: -10px;
+}
+label[for=yes7] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=no7] {
+position: absolute;
+right: -10px;
+}
+label[for=yes8] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=no8] {
+position: absolute;
+right: -10px;
+}
+label[for=yes9] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=no9] {
+position: absolute;
+right: -10px;
+}
+label[for=yes10] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=no10] {
+position: absolute;
+right: -10px;
+}
+label[for=yes11] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=no11] {
+position: absolute;
+right: -10px;
+}
+label[for=yes12] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=no12] {
+position: absolute;
+right: -10px;
+}
+label[for=yes13] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=no13] {
+position: absolute;
+right: -10px;
+}
+label[for=yes14] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=no14] {
+position: absolute;
+right: -10px;
+}
+label[for=yes15] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=no15] {
+position: absolute;
+right: -10px;
+}
+label[for=yes16] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=no16] {
+position: absolute;
+right: -10px;
+}
+label[for=yes17] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=no17] {
+position: absolute;
+right: -10px;
+}
+label[for=yes18] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=no18] {
+position: absolute;
+right: -10px;
+}
+label[for=yes19] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=no19] {
+position: absolute;
+right: -10px;
+}
+label[for=yes20] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=no20] {
+position: absolute;
+right: -10px;
+}
+label[for=yes21] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=no21] {
+position: absolute;
+right: -10px;
+}
+label[for=yes22] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=no22] {
+position: absolute;
+right: -10px;
+}
+label[for=yes23] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=no23] {
+position: absolute;
+right: -10px;
+}
+label[for=yes24] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=no24] {
+position: absolute;
+right: -10px;
+}
+label[for=yes25] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=no25] {
+position: absolute;
+right: -10px;
+}
+label[for=yes26] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=no26] {
+position: absolute;
+right: -10px;
+}
+label[for=yes27] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=no27] {
+position: absolute;
+right: -10px;
+}
+label[for=yes28] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=no28] {
+position: absolute;
+right: -10px;
+}
+label[for=yes29] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=no29] {
+position: absolute;
+right: -10px;
+}
+label[for=yes30] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=no30] {
+position: absolute;
+right: -10px;
+}
+label[for=yes31] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=no31] {
+position: absolute;
+right: -10px;
+}
+label[for=yes32] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=no32] {
+position: absolute;
+right: -10px;
+}
+label[for=yes33] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=no33] {
+position: absolute;
+right: -10px;
+}
+label[for=yes34] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=no34] {
+position: absolute;
+right: -10px;
+}
+
+#opsRdNo:checked ~ .switch {
+background: #ff3b30;
+}
+#opsRdNo:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#opsRdNo:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#opsRdYes:checked ~ .switch label[for=opsRdYes] {
+color: #fff;
+}
+#opsRdNo:checked ~ .switch label[for=opsRdNo] {
+color: #fff;
+}
+
+#opsRandomNo:checked ~ .switch {
+background: #ff3b30;
+}
+#opsRandomNo:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#opsRandomNo:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#opsRandomYes:checked ~ .switch label[for=opsRandomYes] {
+color: #fff;
+}
+#opsRandomNo:checked ~ .switch label[for=opsRandomNo] {
+color: #fff;
+}
+
+#no:checked ~ .switch {
+background: #ff3b30;
+}
+#no:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#no:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#yes:checked ~ .switch label[for=yes] {
+color: #fff;
+}
+#no:checked ~ .switch label[for=no] {
+color: #fff;
+}
+
+#nog:checked ~ .switch {
+background: #ff3b30;
+}
+#nog:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#nog:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#yesg:checked ~ .switch label[for=yesg] {
+color: #fff;
+}
+#nog:checked ~ .switch label[for=nog] {
+color: #fff;
+}
+
+#noa:checked ~ .switch {
+background: #ff3b30;
+}
+#noa:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#noa:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#yesa:checked ~ .switch label[for=yesa] {
+color: #fff;
+}
+#noa:checked ~ .switch label[for=noa] {
+color: #fff;
+}
+
+#no1:checked ~ .switch {
+background: #ff3b30;
+}
+#no1:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#no1:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#yes1:checked ~ .switch label[for=yes1] {
+color: #fff;
+}
+#no1:checked ~ .switch label[for=no1] {
+color: #fff;
+}
+
+#no2:checked ~ .switch {
+background: #ff3b30;
+}
+#no2:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#no2:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#yes2:checked ~ .switch label[for=yes2] {
+color: #fff;
+}
+#no2:checked ~ .switch label[for=no2] {
+color: #fff;
+}
+
+#no3:checked ~ .switch {
+background: #ff3b30;
+}
+#no3:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#no3:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#yes3:checked ~ .switch label[for=yes3] {
+color: #fff;
+}
+#no3:checked ~ .switch label[for=no3] {
+color: #fff;
+}
+
+#no4:checked ~ .switch {
+background: #ff3b30;
+}
+#no4:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#no4:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#yes4:checked ~ .switch label[for=yes4] {
+color: #fff;
+}
+#no4:checked ~ .switch label[for=no4] {
+color: #fff;
+}
+
+#no5:checked ~ .switch {
+background: #ff3b30;
+}
+#no5:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#no5:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#yes5:checked ~ .switch label[for=yes5] {
+color: #fff;
+}
+#no5:checked ~ .switch label[for=no5] {
+color: #fff;
+}
+
+#no6:checked ~ .switch {
+background: #ff3b30;
+}
+#no6:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#no6:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#yes6:checked ~ .switch label[for=yes6] {
+color: #fff;
+}
+#no6:checked ~ .switch label[for=no6] {
+color: #fff;
+}
+
+#no7:checked ~ .switch {
+background: #ff3b30;
+}
+#no7:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#no7:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#yes7:checked ~ .switch label[for=yes7] {
+color: #fff;
+}
+#no7:checked ~ .switch label[for=no7] {
+color: #fff;
+}
+
+#no8:checked ~ .switch {
+background: #ff3b30;
+}
+#no8:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#no8:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#yes8:checked ~ .switch label[for=yes8] {
+color: #fff;
+}
+#no8:checked ~ .switch label[for=no8] {
+color: #fff;
+}
+
+#no9:checked ~ .switch {
+background: #ff3b30;
+}
+#no9:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#no9:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#yes9:checked ~ .switch label[for=yes9] {
+color: #fff;
+}
+#no9:checked ~ .switch label[for=no9] {
+color: #fff;
+}
+
+#no10:checked ~ .switch {
+background: #ff3b30;
+}
+#no10:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#no10:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#yes10:checked ~ .switch label[for=yes10] {
+color: #fff;
+}
+#no10:checked ~ .switch label[for=no10] {
+color: #fff;
+}
+
+#no11:checked ~ .switch {
+background: #ff3b30;
+}
+#no11:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#no11:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#yes11:checked ~ .switch label[for=yes11] {
+color: #fff;
+}
+#no11:checked ~ .switch label[for=no11] {
+color: #fff;
+}
+
+#no12:checked ~ .switch {
+background: #ff3b30;
+}
+#no12:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#no12:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#yes12:checked ~ .switch label[for=yes12] {
+color: #fff;
+}
+#no12:checked ~ .switch label[for=no12] {
+color: #fff;
+}
+
+#no13:checked ~ .switch {
+background: #ff3b30;
+}
+#no13:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#no13:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#yes13:checked ~ .switch label[for=yes13] {
+color: #fff;
+}
+#no13:checked ~ .switch label[for=no13] {
+color: #fff;
+}
+
+#no14:checked ~ .switch {
+background: #ff3b30;
+}
+#no14:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#no14:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#yes14:checked ~ .switch label[for=yes14] {
+color: #fff;
+}
+#no14:checked ~ .switch label[for=no14] {
+color: #fff;
+}
+
+#no15:checked ~ .switch {
+background: #ff3b30;
+}
+#no15:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#no15:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#yes15:checked ~ .switch label[for=yes15] {
+color: #fff;
+}
+#no15:checked ~ .switch label[for=no15] {
+color: #fff;
+}
+
+#no16:checked ~ .switch {
+background: #ff3b30;
+}
+#no16:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#no16:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#yes16:checked ~ .switch label[for=yes16] {
+color: #fff;
+}
+#no16:checked ~ .switch label[for=no16] {
+color: #fff;
+}
+
+#no17:checked ~ .switch {
+background: #ff3b30;
+}
+#no17:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#no17:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#yes17:checked ~ .switch label[for=yes17] {
+color: #fff;
+}
+#no17:checked ~ .switch label[for=no17] {
+color: #fff;
+}
+
+#no18:checked ~ .switch {
+background: #ff3b30;
+}
+#no18:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#no18:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#yes18:checked ~ .switch label[for=yes18] {
+color: #fff;
+}
+#no18:checked ~ .switch label[for=no18] {
+color: #fff;
+}
+#no19:checked ~ .switch {
+background: #ff3b30;
+}
+#no19:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#no19:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#yes19:checked ~ .switch label[for=yes19] {
+color: #fff;
+}
+#no19:checked ~ .switch label[for=no19] {
+color: #fff;
+}
+#no20:checked ~ .switch {
+background: #ff3b30;
+}
+#no20:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#no20:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#yes20:checked ~ .switch label[for=yes20] {
+color: #fff;
+}
+#no20:checked ~ .switch label[for=no20] {
+color: #fff;
+}
+#no21:checked ~ .switch {
+background: #ff3b30;
+}
+#no21:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#no21:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#yes21:checked ~ .switch label[for=yes21] {
+color: #fff;
+}
+#no21:checked ~ .switch label[for=no21] {
+color: #fff;
+}
+#no22:checked ~ .switch {
+background: #ff3b30;
+}
+#no22:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#no22:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#yes22:checked ~ .switch label[for=yes22] {
+color: #fff;
+}
+#no22:checked ~ .switch label[for=no22] {
+color: #fff;
+}
+#no23:checked ~ .switch {
+background: #ff3b30;
+}
+#no23:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#no23:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#yes23:checked ~ .switch label[for=yes23] {
+color: #fff;
+}
+#no23:checked ~ .switch label[for=no23] {
+color: #fff;
+}
+#no24:checked ~ .switch {
+background: #ff3b30;
+}
+#no24:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#no24:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#yes24:checked ~ .switch label[for=yes24] {
+color: #fff;
+}
+#no24:checked ~ .switch label[for=no24] {
+color: #fff;
+}
+#no25:checked ~ .switch {
+background: #ff3b30;
+}
+#no25:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#no25:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#yes25:checked ~ .switch label[for=yes25] {
+color: #fff;
+}
+#no25:checked ~ .switch label[for=no25] {
+color: #fff;
+}
+#no26:checked ~ .switch {
+background: #ff3b30;
+}
+#no26:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#no26:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#yes26:checked ~ .switch label[for=yes26] {
+color: #fff;
+}
+#no26:checked ~ .switch label[for=no26] {
+color: #fff;
+}
+#no27:checked ~ .switch {
+background: #ff3b30;
+}
+#no27:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#no27:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#yes27:checked ~ .switch label[for=yes27] {
+color: #fff;
+}
+#no27:checked ~ .switch label[for=no27] {
+color: #fff;
+}
+#no28:checked ~ .switch {
+background: #ff3b30;
+}
+#no28:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#no28:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#yes28:checked ~ .switch label[for=yes28] {
+color: #fff;
+}
+#no28:checked ~ .switch label[for=no28] {
+color: #fff;
+}
+#no29:checked ~ .switch {
+background: #ff3b30;
+}
+#no29:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#no29:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#yes29:checked ~ .switch label[for=yes29] {
+color: #fff;
+}
+#no29:checked ~ .switch label[for=no29] {
+color: #fff;
+}
+#no30:checked ~ .switch {
+background: #ff3b30;
+}
+#no30:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#no30:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#yes30:checked ~ .switch label[for=yes30] {
+color: #fff;
+}
+#no30:checked ~ .switch label[for=no30] {
+color: #fff;
+}
+#no31:checked ~ .switch {
+background: #ff3b30;
+}
+#no31:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#no31:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#yes31:checked ~ .switch label[for=yes31] {
+color: #fff;
+}
+#no31:checked ~ .switch label[for=no31] {
+color: #fff;
+}
+#no32:checked ~ .switch {
+background: #ff3b30;
+}
+#no32:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#no32:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#yes32:checked ~ .switch label[for=yes32] {
+color: #fff;
+}
+#no32:checked ~ .switch label[for=no32] {
+color: #fff;
+}
+#no33:checked ~ .switch {
+background: #ff3b30;
+}
+#no33:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#no33:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#yes33:checked ~ .switch label[for=yes33] {
+color: #fff;
+}
+#no33:checked ~ .switch label[for=no33] {
+color: #fff;
+}
+#no34:checked ~ .switch {
+background: #ff3b30;
+}
+#no34:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#no34:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#yes34:checked ~ .switch label[for=yes34] {
+color: #fff;
+}
+#no34:checked ~ .switch label[for=no34] {
+color: #fff;
+}
+
+/* GLOBAL PROPERTIES */
+
+label[for=g-yes0] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=g-no0] {
+position: absolute;
+right: -10px;
+}
+label[for=g-yes1] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=g-no1] {
+position: absolute;
+right: -10px;
+}
+label[for=g-yes2] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=g-no2] {
+position: absolute;
+right: -10px;
+}
+label[for=g-yes3] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=g-no3] {
+position: absolute;
+right: -10px;
+}
+label[for=g-yes4] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=g-no4] {
+position: absolute;
+right: -10px;
+}
+label[for=g-yes5] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=g-no5] {
+position: absolute;
+right: -10px;
+}
+label[for=g-yes6] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=g-no6] {
+position: absolute;
+right: -10px;
+}
+label[for=g-yes7] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=g-no7] {
+position: absolute;
+right: -10px;
+}
+
+label[for=g-yes8] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=g-no8] {
+position: absolute;
+right: -10px;
+}
+
+label[for=g-yes9] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=g-no9] {
+position: absolute;
+right: -10px;
+}
+
+label[for=g-yes10] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=g-no10] {
+position: absolute;
+right: -10px;
+}
+
+label[for=g-yes11] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=g-no11] {
+position: absolute;
+right: -10px;
+}
+
+label[for=g-yes12] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=g-no12] {
+position: absolute;
+right: -10px;
+}
+
+label[for=g-yes13] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=g-no13] {
+position: absolute;
+right: -10px;
+}
+
+label[for=g-yes14] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=g-no14] {
+position: absolute;
+right: -10px;
+}
+
+label[for=g-yes15] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=g-no15] {
+position: absolute;
+right: -10px;
+}
+
+label[for=g-yes16] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=g-no16] {
+position: absolute;
+right: -10px;
+}
+
+label[for=g-yes17] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=g-no17] {
+position: absolute;
+right: -10px;
+}
+
+label[for=g-yes18] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=g-no18] {
+position: absolute;
+right: -10px;
+}
+label[for=g-yes19] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=g-no19] {
+position: absolute;
+right: -10px;
+}
+label[for=g-yes20] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=g-no20] {
+position: absolute;
+right: -10px;
+}
+
+label[for=g-yes21] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=g-no21] {
+position: absolute;
+right: -10px;
+}
+label[for=g-yes22] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=g-no22] {
+position: absolute;
+right: -10px;
+}
+label[for=g-yes23] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=g-no23] {
+position: absolute;
+right: -10px;
+}
+label[for=g-yes24] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=g-no24] {
+position: absolute;
+right: -10px;
+}
+label[for=g-yes25] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=g-no25] {
+position: absolute;
+right: -10px;
+}
+label[for=g-yes26] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=g-no26] {
+position: absolute;
+right: -10px;
+}
+label[for=g-yes27] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=g-no27] {
+position: absolute;
+right: -10px;
+}
+label[for=g-yes28] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=g-no28] {
+position: absolute;
+right: -10px;
+}
+label[for=g-yes29] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=g-no29] {
+position: absolute;
+right: -10px;
+}
+label[for=g-yes30] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=g-no30] {
+position: absolute;
+right: -10px;
+}
+label[for=g-yes31] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=g-no31] {
+position: absolute;
+right: -10px;
+}
+label[for=g-yes32] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=g-no32] {
+position: absolute;
+right: -10px;
+}
+label[for=g-yes33] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=g-no33] {
+position: absolute;
+right: -10px;
+}
+label[for=g-yes34] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=g-no34] {
+position: absolute;
+right: -10px;
+}
+
+#g-no0:checked ~ .switch {
+background: #ff3b30;
+}
+#g-no0:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#g-no0:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#g-yes0:checked ~ .switch label[for=g-yes0] {
+color: #fff;
+}
+#g-no0:checked ~ .switch label[for=g-no0] {
+color: #fff;
+}
+
+#g-no1:checked ~ .switch {
+background: #ff3b30;
+}
+#g-no1:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#g-no1:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#g-yes1:checked ~ .switch label[for=g-yes1] {
+color: #fff;
+}
+#g-no1:checked ~ .switch label[for=g-no1] {
+color: #fff;
+}
+
+#g-no2:checked ~ .switch {
+background: #ff3b30;
+}
+#g-no2:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#g-no2:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#g-yes2:checked ~ .switch label[for=g-yes2] {
+color: #fff;
+}
+#g-no2:checked ~ .switch label[for=g-no2] {
+color: #fff;
+}
+
+#g-no3:checked ~ .switch {
+background: #ff3b30;
+}
+#g-no3:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#g-no3:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#g-yes3:checked ~ .switch label[for=g-yes3] {
+color: #fff;
+}
+#g-no3:checked ~ .switch label[for=g-no3] {
+color: #fff;
+}
+
+#g-no4:checked ~ .switch {
+background: #ff3b30;
+}
+#g-no4:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#g-no4:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#g-yes4:checked ~ .switch label[for=g-yes4] {
+color: #fff;
+}
+#g-no4:checked ~ .switch label[for=g-no4] {
+color: #fff;
+}
+
+#g-no5:checked ~ .switch {
+background: #ff3b30;
+}
+#g-no5:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#g-no5:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#g-yes5:checked ~ .switch label[for=g-yes5] {
+color: #fff;
+}
+#g-no5:checked ~ .switch label[for=g-no5] {
+color: #fff;
+}
+
+#g-no6:checked ~ .switch {
+background: #ff3b30;
+}
+#g-no6:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#g-no6:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#g-yes6:checked ~ .switch label[for=g-yes6] {
+color: #fff;
+}
+#g-no6:checked ~ .switch label[for=g-no6] {
+color: #fff;
+}
+
+#g-no7:checked ~ .switch {
+background: #ff3b30;
+}
+#g-no7:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#g-no7:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#g-yes7:checked ~ .switch label[for=g-yes7] {
+color: #fff;
+}
+#g-no7:checked ~ .switch label[for=g-no7] {
+color: #fff;
+}
+
+#g-no8:checked ~ .switch {
+background: #ff3b30;
+}
+#g-no8:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#g-no8:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#g-yes8:checked ~ .switch label[for=g-yes8] {
+color: #fff;
+}
+#g-no8:checked ~ .switch label[for=g-no8] {
+color: #fff;
+}
+
+#g-no9:checked ~ .switch {
+background: #ff3b30;
+}
+#g-no9:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#g-no9:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#g-yes9:checked ~ .switch label[for=g-yes9] {
+color: #fff;
+}
+#g-no9:checked ~ .switch label[for=g-no9] {
+color: #fff;
+}
+
+#g-no10:checked ~ .switch {
+background: #ff3b30;
+}
+#g-no10:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#g-no10:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#g-yes10:checked ~ .switch label[for=g-yes10] {
+color: #fff;
+}
+#g-no10:checked ~ .switch label[for=g-no10] {
+color: #fff;
+}
+
+#g-no11:checked ~ .switch {
+background: #ff3b30;
+}
+#g-no11:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#g-no11:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#g-yes11:checked ~ .switch label[for=g-yes11] {
+color: #fff;
+}
+#g-no11:checked ~ .switch label[for=g-no11] {
+color: #fff;
+}
+
+#g-no12:checked ~ .switch {
+background: #ff3b30;
+}
+#g-no12:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#g-no12:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#g-yes12:checked ~ .switch label[for=g-yes12] {
+color: #fff;
+}
+#g-no12:checked ~ .switch label[for=g-no12] {
+color: #fff;
+}
+
+#g-no13:checked ~ .switch {
+background: #ff3b30;
+}
+#g-no13:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#g-no13:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#g-yes13:checked ~ .switch label[for=g-yes13] {
+color: #fff;
+}
+#g-no13:checked ~ .switch label[for=g-no13] {
+color: #fff;
+}
+
+#g-no14:checked ~ .switch {
+background: #ff3b30;
+}
+#g-no14:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#g-no14:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#g-yes14:checked ~ .switch label[for=g-yes14] {
+color: #fff;
+}
+#g-no14:checked ~ .switch label[for=g-no14] {
+color: #fff;
+}
+
+#g-no15:checked ~ .switch {
+background: #ff3b30;
+}
+#g-no15:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#g-no15:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#g-yes15:checked ~ .switch label[for=g-yes15] {
+color: #fff;
+}
+#g-no15:checked ~ .switch label[for=g-no15] {
+color: #fff;
+}
+
+#g-no16:checked ~ .switch {
+background: #ff3b30;
+}
+#g-no16:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#g-no16:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#g-yes16:checked ~ .switch label[for=g-yes16] {
+color: #fff;
+}
+#g-no16:checked ~ .switch label[for=g-no16] {
+color: #fff;
+}
+
+#g-no17:checked ~ .switch {
+background: #ff3b30;
+}
+#g-no17:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#g-no17:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#g-yes17:checked ~ .switch label[for=g-yes17] {
+color: #fff;
+}
+#g-no17:checked ~ .switch label[for=g-no17] {
+color: #fff;
+}
+
+#g-no18:checked ~ .switch {
+background: #ff3b30;
+}
+#g-no18:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#g-no18:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#g-yes18:checked ~ .switch label[for=g-yes18] {
+color: #fff;
+}
+#g-no18:checked ~ .switch label[for=g-no18] {
+color: #fff;
+}
+#g-no19:checked ~ .switch {
+background: #ff3b30;
+}
+#g-no19:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#g-no19:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#g-yes19:checked ~ .switch label[for=g-yes19] {
+color: #fff;
+}
+#g-no19:checked ~ .switch label[for=g-no19] {
+color: #fff;
+}
+#g-no20:checked ~ .switch {
+background: #ff3b30;
+}
+#g-no20:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#g-no20:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#g-yes20:checked ~ .switch label[for=g-yes20] {
+color: #fff;
+}
+#g-no20:checked ~ .switch label[for=g-no20] {
+color: #fff;
+}
+#g-no21:checked ~ .switch {
+background: #ff3b30;
+}
+#g-no21:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#g-no21:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#g-yes21:checked ~ .switch label[for=g-yes21] {
+color: #fff;
+}
+#g-no21:checked ~ .switch label[for=g-no21] {
+color: #fff;
+}
+#g-no22:checked ~ .switch {
+background: #ff3b30;
+}
+#g-no22:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#g-no22:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#g-yes22:checked ~ .switch label[for=g-yes22] {
+color: #fff;
+}
+#g-no22:checked ~ .switch label[for=g-no22] {
+color: #fff;
+}
+#g-no23:checked ~ .switch {
+background: #ff3b30;
+}
+#g-no23:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#g-no23:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#g-yes23:checked ~ .switch label[for=g-yes23] {
+color: #fff;
+}
+#g-no23:checked ~ .switch label[for=g-no23] {
+color: #fff;
+}
+#g-no24:checked ~ .switch {
+background: #ff3b30;
+}
+#g-no24:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#g-no24:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#g-yes24:checked ~ .switch label[for=g-yes24] {
+color: #fff;
+}
+#g-no24:checked ~ .switch label[for=g-no24] {
+color: #fff;
+}
+#g-no25:checked ~ .switch {
+background: #ff3b30;
+}
+#g-no25:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#g-no25:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#g-yes25:checked ~ .switch label[for=g-yes25] {
+color: #fff;
+}
+#g-no25:checked ~ .switch label[for=g-no25] {
+color: #fff;
+}
+#g-no26:checked ~ .switch {
+background: #ff3b30;
+}
+#g-no26:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#g-no26:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#g-yes26:checked ~ .switch label[for=g-yes26] {
+color: #fff;
+}
+#g-no26:checked ~ .switch label[for=g-no26] {
+color: #fff;
+}
+#g-no27:checked ~ .switch {
+background: #ff3b30;
+}
+#g-no27:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#g-no27:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#g-yes27:checked ~ .switch label[for=g-yes27] {
+color: #fff;
+}
+#g-no27:checked ~ .switch label[for=g-no27] {
+color: #fff;
+}
+#g-no28:checked ~ .switch {
+background: #ff3b30;
+}
+#g-no28:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#g-no28:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#g-yes28:checked ~ .switch label[for=g-yes28] {
+color: #fff;
+}
+#g-no28:checked ~ .switch label[for=g-no28] {
+color: #fff;
+}
+#g-no29:checked ~ .switch {
+background: #ff3b30;
+}
+#g-no29:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#g-no29:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#g-yes29:checked ~ .switch label[for=g-yes29] {
+color: #fff;
+}
+#g-no29:checked ~ .switch label[for=g-no29] {
+color: #fff;
+}
+#g-no30:checked ~ .switch {
+background: #ff3b30;
+}
+#g-no30:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#g-no30:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#g-yes30:checked ~ .switch label[for=g-yes30] {
+color: #fff;
+}
+#g-no30:checked ~ .switch label[for=g-no30] {
+color: #fff;
+}
+#g-no31:checked ~ .switch {
+background: #ff3b30;
+}
+#g-no31:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#g-no31:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#g-yes31:checked ~ .switch label[for=g-yes31] {
+color: #fff;
+}
+#g-no31:checked ~ .switch label[for=g-no31] {
+color: #fff;
+}
+#g-no32:checked ~ .switch {
+background: #ff3b30;
+}
+#g-no32:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#g-no32:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#g-yes32:checked ~ .switch label[for=g-yes32] {
+color: #fff;
+}
+#g-no32:checked ~ .switch label[for=g-no32] {
+color: #fff;
+}
+#g-no33:checked ~ .switch {
+background: #ff3b30;
+}
+#g-no33:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#g-no33:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#g-yes33:checked ~ .switch label[for=g-yes33] {
+color: #fff;
+}
+#g-no33:checked ~ .switch label[for=g-no33] {
+color: #fff;
+}
+#g-no34:checked ~ .switch {
+background: #ff3b30;
+}
+#g-no34:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#g-no34:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#g-yes34:checked ~ .switch label[for=g-yes34] {
+color: #fff;
+}
+#g-no34:checked ~ .switch label[for=g-no34] {
+color: #fff;
+}
+
+/* SUB PROPERTIES */
+
+label[for=s-yes0] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=s-no0] {
+position: absolute;
+right: -10px;
+}
+label[for=s-yes1] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=s-no1] {
+position: absolute;
+right: -10px;
+}
+label[for=s-yes2] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=s-no2] {
+position: absolute;
+right: -10px;
+}
+label[for=s-yes3] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=s-no3] {
+position: absolute;
+right: -10px;
+}
+label[for=s-yes4] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=s-no4] {
+position: absolute;
+right: -10px;
+}
+label[for=s-yes5] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=s-no5] {
+position: absolute;
+right: -10px;
+}
+label[for=s-yes6] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=s-no6] {
+position: absolute;
+right: -10px;
+}
+label[for=s-yes7] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=s-no7] {
+position: absolute;
+right: -10px;
+}
+
+label[for=s-yes8] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=s-no8] {
+position: absolute;
+right: -10px;
+}
+
+label[for=s-yes9] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=s-no9] {
+position: absolute;
+right: -10px;
+}
+
+label[for=s-yes10] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=s-no10] {
+position: absolute;
+right: -10px;
+}
+
+label[for=s-yes11] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=s-no11] {
+position: absolute;
+right: -10px;
+}
+
+label[for=s-yes12] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=s-no12] {
+position: absolute;
+right: -10px;
+}
+
+label[for=s-yes13] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=s-no13] {
+position: absolute;
+right: -10px;
+}
+
+label[for=s-yes14] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=s-no14] {
+position: absolute;
+right: -10px;
+}
+
+label[for=s-yes15] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=s-no15] {
+position: absolute;
+right: -10px;
+}
+
+label[for=s-yes16] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=s-no16] {
+position: absolute;
+right: -10px;
+}
+
+label[for=s-yes17] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=s-no17] {
+position: absolute;
+right: -10px;
+}
+label[for=s-yes18] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=s-no18] {
+position: absolute;
+right: -10px;
+}
+label[for=s-yes19] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=s-no19] {
+position: absolute;
+right: -10px;
+}
+label[for=s-yes20] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=s-no20] {
+position: absolute;
+right: -10px;
+}
+label[for=s-yes21] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=s-no21] {
+position: absolute;
+right: -10px;
+}
+label[for=s-yes22] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=s-no22] {
+position: absolute;
+right: -10px;
+}
+label[for=s-yes23] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=s-no23] {
+position: absolute;
+right: -10px;
+}
+label[for=s-yes24] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=s-no24] {
+position: absolute;
+right: -10px;
+}
+label[for=s-yes25] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=s-no25] {
+position: absolute;
+right: -10px;
+}
+label[for=s-yes26] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=s-no26] {
+position: absolute;
+right: -10px;
+}
+label[for=s-yes27] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=s-no27] {
+position: absolute;
+right: -10px;
+}
+label[for=s-yes28] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=s-no28] {
+position: absolute;
+right: -10px;
+}
+label[for=s-yes29] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=s-no29] {
+position: absolute;
+right: -10px;
+}
+label[for=s-yes30] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=s-no30] {
+position: absolute;
+right: -10px;
+}
+label[for=s-yes31] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=s-no31] {
+position: absolute;
+right: -10px;
+}
+label[for=s-yes32] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=s-no32] {
+position: absolute;
+right: -10px;
+}
+label[for=s-yes33] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=s-no33] {
+position: absolute;
+right: -10px;
+}
+label[for=s-yes34] {
+position: absolute;
+left: -7px;
+height: 20px;
+}
+label[for=s-no34] {
+position: absolute;
+right: -10px;
+}
+
+#s-no0:checked ~ .switch {
+background: #ff3b30;
+}
+#s-no0:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#s-no0:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#s-yes0:checked ~ .switch label[for=s-yes0] {
+color: #fff;
+}
+#s-no0:checked ~ .switch label[for=s-no0] {
+color: #fff;
+}
+
+#s-no1:checked ~ .switch {
+background: #ff3b30;
+}
+#s-no1:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#s-no1:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#s-yes1:checked ~ .switch label[for=s-yes1] {
+color: #fff;
+}
+#s-no1:checked ~ .switch label[for=s-no1] {
+color: #fff;
+}
+
+#s-no2:checked ~ .switch {
+background: #ff3b30;
+}
+#s-no2:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#s-no2:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#s-yes2:checked ~ .switch label[for=s-yes2] {
+color: #fff;
+}
+#s-no2:checked ~ .switch label[for=s-no2] {
+color: #fff;
+}
+
+#s-no3:checked ~ .switch {
+background: #ff3b30;
+}
+#s-no3:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#s-no3:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#s-yes3:checked ~ .switch label[for=s-yes3] {
+color: #fff;
+}
+#s-no3:checked ~ .switch label[for=s-no3] {
+color: #fff;
+}
+
+#s-no4:checked ~ .switch {
+background: #ff3b30;
+}
+#s-no4:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#s-no4:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#s-yes4:checked ~ .switch label[for=s-yes4] {
+color: #fff;
+}
+#s-no4:checked ~ .switch label[for=s-no4] {
+color: #fff;
+}
+
+#s-no5:checked ~ .switch {
+background: #ff3b30;
+}
+#s-no5:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#s-no5:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#s-yes5:checked ~ .switch label[for=s-yes5] {
+color: #fff;
+}
+#s-no5:checked ~ .switch label[for=s-no5] {
+color: #fff;
+}
+
+#s-no6:checked ~ .switch {
+background: #ff3b30;
+}
+#s-no6:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#s-no6:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#s-yes6:checked ~ .switch label[for=s-yes6] {
+color: #fff;
+}
+#s-no6:checked ~ .switch label[for=s-no6] {
+color: #fff;
+}
+
+#s-no7:checked ~ .switch {
+background: #ff3b30;
+}
+#s-no7:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#s-no7:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#s-yes7:checked ~ .switch label[for=s-yes7] {
+color: #fff;
+}
+#s-no7:checked ~ .switch label[for=s-no7] {
+color: #fff;
+}
+
+#s-no8:checked ~ .switch {
+background: #ff3b30;
+}
+#s-no8:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#s-no8:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#s-yes8:checked ~ .switch label[for=s-yes8] {
+color: #fff;
+}
+#s-no8:checked ~ .switch label[for=s-no8] {
+color: #fff;
+}
+
+#s-no9:checked ~ .switch {
+background: #ff3b30;
+}
+#s-no9:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#s-no9:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#s-yes9:checked ~ .switch label[for=s-yes9] {
+color: #fff;
+}
+#s-no9:checked ~ .switch label[for=s-no9] {
+color: #fff;
+}
+
+#s-no10:checked ~ .switch {
+background: #ff3b30;
+}
+#s-no10:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#s-no10:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#s-yes10:checked ~ .switch label[for=s-yes10] {
+color: #fff;
+}
+#s-no10:checked ~ .switch label[for=s-no10] {
+color: #fff;
+}
+
+#s-no11:checked ~ .switch {
+background: #ff3b30;
+}
+#s-no11:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#s-no11:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#s-yes11:checked ~ .switch label[for=s-yes11] {
+color: #fff;
+}
+#s-no11:checked ~ .switch label[for=s-no11] {
+color: #fff;
+}
+
+#s-no12:checked ~ .switch {
+background: #ff3b30;
+}
+#s-no12:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#s-no12:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#s-yes12:checked ~ .switch label[for=s-yes12] {
+color: #fff;
+}
+#s-no12:checked ~ .switch label[for=s-no12] {
+color: #fff;
+}
+
+#s-no13:checked ~ .switch {
+background: #ff3b30;
+}
+#s-no13:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#s-no13:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#s-yes13:checked ~ .switch label[for=s-yes13] {
+color: #fff;
+}
+#s-no13:checked ~ .switch label[for=s-no13] {
+color: #fff;
+}
+
+#s-no14:checked ~ .switch {
+background: #ff3b30;
+}
+#s-no14:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#s-no14:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#s-yes14:checked ~ .switch label[for=s-yes14] {
+color: #fff;
+}
+#s-no14:checked ~ .switch label[for=s-no14] {
+color: #fff;
+}
+
+#s-no15:checked ~ .switch {
+background: #ff3b30;
+}
+#s-no15:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#s-no15:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#s-yes15:checked ~ .switch label[for=s-yes15] {
+color: #fff;
+}
+#s-no15:checked ~ .switch label[for=s-no15] {
+color: #fff;
+}
+
+#s-no16:checked ~ .switch {
+background: #ff3b30;
+}
+#s-no16:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#s-no16:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#s-yes16:checked ~ .switch label[for=s-yes16] {
+color: #fff;
+}
+#s-no16:checked ~ .switch label[for=s-no16] {
+color: #fff;
+}
+
+#s-no17:checked ~ .switch {
+background: #ff3b30;
+}
+#s-no17:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#s-no17:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#s-yes17:checked ~ .switch label[for=s-yes17] {
+color: #fff;
+}
+#s-no17:checked ~ .switch label[for=s-no17] {
+color: #fff;
+}
+
+#s-no18:checked ~ .switch {
+background: #ff3b30;
+}
+#s-no18:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#s-no18:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#s-yes18:checked ~ .switch label[for=s-yes18] {
+color: #fff;
+}
+#s-no18:checked ~ .switch label[for=s-no18] {
+color: #fff;
+}
+#s-no19:checked ~ .switch {
+background: #ff3b30;
+}
+#s-no19:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#s-no19:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#s-yes19:checked ~ .switch label[for=s-yes19] {
+color: #fff;
+}
+#s-no19:checked ~ .switch label[for=s-no19] {
+color: #fff;
+}
+#s-no20:checked ~ .switch {
+background: #ff3b30;
+}
+#s-no20:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#s-no20:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#s-yes20:checked ~ .switch label[for=s-yes20] {
+color: #fff;
+}
+#s-no20:checked ~ .switch label[for=s-no20] {
+color: #fff;
+}
+#s-no21:checked ~ .switch {
+background: #ff3b30;
+}
+#s-no21:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#s-no21:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#s-yes21:checked ~ .switch label[for=s-yes21] {
+color: #fff;
+}
+#s-no21:checked ~ .switch label[for=s-no21] {
+color: #fff;
+}
+#s-no22:checked ~ .switch {
+background: #ff3b30;
+}
+#s-no22:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#s-no22:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#s-yes22:checked ~ .switch label[for=s-yes22] {
+color: #fff;
+}
+#s-no22:checked ~ .switch label[for=s-no22] {
+color: #fff;
+}
+#s-no23:checked ~ .switch {
+background: #ff3b30;
+}
+#s-no23:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#s-no23:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#s-yes23:checked ~ .switch label[for=s-yes23] {
+color: #fff;
+}
+#s-no23:checked ~ .switch label[for=s-no23] {
+color: #fff;
+}
+#s-no24:checked ~ .switch {
+background: #ff3b30;
+}
+#s-no24:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#s-no24:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#s-yes24:checked ~ .switch label[for=s-yes24] {
+color: #fff;
+}
+#s-no24:checked ~ .switch label[for=s-no24] {
+color: #fff;
+}
+#s-no25:checked ~ .switch {
+background: #ff3b30;
+}
+#s-no25:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#s-no25:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#s-yes25:checked ~ .switch label[for=s-yes25] {
+color: #fff;
+}
+#s-no25:checked ~ .switch label[for=s-no25] {
+color: #fff;
+}
+#s-no26:checked ~ .switch {
+background: #ff3b30;
+}
+#s-no26:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#s-no26:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#s-yes26:checked ~ .switch label[for=s-yes26] {
+color: #fff;
+}
+#s-no26:checked ~ .switch label[for=s-no26] {
+color: #fff;
+}
+#s-no27:checked ~ .switch {
+background: #ff3b30;
+}
+#s-no27:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#s-no27:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#s-yes27:checked ~ .switch label[for=s-yes27] {
+color: #fff;
+}
+#s-no27:checked ~ .switch label[for=s-no27] {
+color: #fff;
+}
+#s-no28:checked ~ .switch {
+background: #ff3b30;
+}
+#s-no28:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#s-no28:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#s-yes28:checked ~ .switch label[for=s-yes28] {
+color: #fff;
+}
+#s-no28:checked ~ .switch label[for=s-no28] {
+color: #fff;
+}
+#s-no29:checked ~ .switch {
+background: #ff3b30;
+}
+#s-no29:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#s-no29:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#s-yes29:checked ~ .switch label[for=s-yes29] {
+color: #fff;
+}
+#s-no29:checked ~ .switch label[for=s-no29] {
+color: #fff;
+}
+#s-no30:checked ~ .switch {
+background: #ff3b30;
+}
+#s-no30:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#s-no30:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#s-yes30:checked ~ .switch label[for=s-yes30] {
+color: #fff;
+}
+#s-no30:checked ~ .switch label[for=s-no30] {
+color: #fff;
+}
+#s-no31:checked ~ .switch {
+background: #ff3b30;
+}
+#s-no31:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#s-no31:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#s-yes31:checked ~ .switch label[for=s-yes31] {
+color: #fff;
+}
+#s-no31:checked ~ .switch label[for=s-no31] {
+color: #fff;
+}
+#s-no32:checked ~ .switch {
+background: #ff3b31;
+}
+#s-no32:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#s-no32:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#s-yes32:checked ~ .switch label[for=s-yes32] {
+color: #fff;
+}
+#s-no32:checked ~ .switch label[for=s-no32] {
+color: #fff;
+}
+#s-no33:checked ~ .switch {
+background: #ff3b31;
+}
+#s-no33:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#s-no33:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#s-yes33:checked ~ .switch label[for=s-yes33] {
+color: #fff;
+}
+#s-no33:checked ~ .switch label[for=s-no33] {
+color: #fff;
+}
+#s-no34:checked ~ .switch {
+background: #ff3b31;
+}
+#s-no34:checked ~ .switch span {
+background: #fff;
+margin-left: -8px;
+}
+#s-no34:checked ~ .switch span:after {
+background: #fff;
+height: 20px;
+margin-top: -8px;
+margin-left: 8px;
+}
+#s-yes34:checked ~ .switch label[for=s-yes34] {
+color: #fff;
+}
+#s-no34:checked ~ .switch label[for=s-no34] {
+color: #fff;
+}
+
+.start-now, .start-now:after {
+animation-delay: 0;
+}
+
+.spin {
+animation: spin 1s 0.5s forwards cubic-bezier(.56,-0.35,.22,1.5);
+}
+
+@keyframes spin {
+50% {
+	transform: rotateZ(-20deg);
+	animation-timing-function: ease;
+}
+100% {
+	transform: rotateZ(360deg);
+}
+}
+
+.waggle {
+animation: waggle 1s 0.5s forwards ease-out;
+}
+
+@keyframes waggle {
+0% {
+	transform: none;
+}
+50% {
+	transform: rotateZ(-20deg) scale(1.2);
+}
+60% {
+	transform: rotateZ(25deg) scale(1.2);
+}
+67.5% {
+	transform: rotateZ(-15deg) scale(1.2);
+}
+75% {
+	transform: rotateZ(15deg) scale(1.2);
+}
+82.5% {
+	transform: rotateZ(-12deg) scale(1.2);
+}
+85% {
+	transform: rotateZ(0) scale(1.2);
+}
+100% {
+	transform: rotateZ(0) scale(1);
+}
+}

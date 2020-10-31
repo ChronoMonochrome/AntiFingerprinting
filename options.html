@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/ares.css">
+		<link rel="stylesheet" href="css/fontawesome-all.min.css">
+		<link rel="stylesheet" href="css/switch.css">
+		<style>
+			.list-group-item.active {
+				z-index: 2;
+				color: #fff;
+				background-color: #62D0F0;
+				border-color: #62D0F0;
+			}
+
+			#txtDomain {
+				background-image: url('img/searchicon.png'); /* Add a search icon to input */
+				background-position: 10px 12px; /* Position the search icon */
+				background-repeat: no-repeat; /* Do not repeat the icon image */
+				width: 100%; /* Full-width */
+				font-size: 16px; /* Increase font-size */
+				padding: 12px 20px 12px 40px; /* Add some padding */
+				border: 1px solid #ddd; /* Add a grey border */
+				margin-bottom: 12px; /* Add some space below the input */
+			}
+		</style>
+	</head>
+
+	<body class="bgopacity">
+		<div style='width:100%;margin-top:50px;'>
+
+		<div style='width:100%;margin: 0 auto;text-align:center;'>
+			<h3>Domain Management</h3>
+			View the <a href='whitelist'>whitelist</a> or <a href='visited'>visited list</a>.
+		</div>
+		<div class="row" style='width:100%;margin: 0 auto;text-align:center;margin-top:10px;'>
+			<div class="col-6">
+				<input type="text" id="txtDomain" placeholder="Search for domain...">
+				<div class='model-footer' style='width:100%;text-align:right;margin-bottom:10px;'>
+					<a href='adddm' class='btn btn-sm' style="color:white;background-color:darkviolet;">Add New</a>
+					<a href='clear' class='btn btn-sm' style="color:white;background-color:red;">Clear All</a>
+				</div>
+				<div class="list-group" role="tablist" id='domainlist' style='height:600px;overflow-y: auto;'></div>
+			</div>
+			<div class="col-6">
+				<div id='switchlist' style='display:none;'>
+					<div class="row">
+						<div class="col-4">
+							<p style='margin:0px;text-align:left;'>Spoofing Enabled</p>
+							<div class="row items-push" style='margin-bottom:5px;'>
+								<div class="col-md-12" style='width:100%;'>
+									<form action="">
+										<input class='tsspoof' name="rdo" id="yes" value='1' checked="" type="radio" style='display: none;'>
+										<input class='tsspoof' name="rdo" id="no" value='2' type="radio" style='display: none;'>
+										<div class="switch" style='width:120px;height:25px;left:5%;'>
+											<label for="yes" style='line-height:25px;'>On</label>
+											<label for="no" style='line-height:25px;'>Off</label>
+											<span></span>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-4">
+							<p style='margin:0px;text-align:left;'>Anti-Anti Fingerprinting</p>
+							<div class="row items-push" style='margin-bottom:5px;'>
+								<div class="col-md-12" style='width:100%;'>
+									<form action="">
+										<input class='tsops34' name="ops34" id="yes34" value='1' checked="" type="radio" style='display: none;'>
+										<input class='tsops34' name="ops34" id="no34" value='2' type="radio" style='display: none;'>
+										<div class="switch" style='width:120px;height:25px;left:5%;'>
+											<label for="yes34" style='line-height:25px;'>On</label>
+											<label for="no34" style='line-height:25px;'>Off</label>
+											<span></span>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-4">
+						</div>
+					</div>
+					<!--
+					2: Accepts
+					7: Audio
+					22: Battery
+					5: Canvas
+					19: clientRects
+					13: Date
+					8: Encoding
+					17: ETag
+					10: Fonts
+					23: Gamepads
+					20: Geolocation
+					12: Hardware
+					14: Language
+					24: Memory
+					25: Media
+					16: Navigator
+					26: Network
+					11: OS
+					9: Plugins
+					15: Referer
+					3: Screen
+					21: sendBeacon
+					4: Timezone
+					27: Threads
+					28: Touchpoints
+					1: User-Agent
+					29: VRDisplay
+					6: WebGL
+					18: WebRTC
+					30: Worker
+					31: Math
+					32: CSS
+					33: Speech
+					34: Anti-anti
+					-->
+					
+					<div class="row">
+						<div class="col-4">
+							<p style='margin:0px;text-align:left;'>Accepts</p>
+							<div class="row items-push" style='margin-bottom:5px;'>
+								<div class="col-md-12" style='width:100%;'>
+									<form action="">
+										<input class='tsops2' name="ops2" id="yes2" value='1' checked="" type="radio" style='display: none;'>
+										<input class='tsops2' name="ops2" id="no2" value='2' type="radio" style='display: none;'>
+										<div class="switch" style='width:120px;height:25px;left:5%;'>
+											<label for="yes2" style='line-height:25px;'>On</label>
+											<label for="no2" style='line-height:25px;'>Off</label>
+											<span></span>
+										</div>
+									</form>
+								</div>
+							</div>
+
+							<p style='margin:0px;text-align:left;'>Audio</p>
+							<div class="row items-push" style='margin-bottom:5px;'>
+								<div class="col-md-12" style='width:100%;'>
+									<form action="">
+										<input class='tsops7' name="ops7" id="yes7" value='1' checked="" type="radio" style='display: none;'>
+										<input class='tsops7' name="ops7" id="no7" value='2' type="radio" style='display: none;'>
+										<div class="switch" style='width:120px;height:25px;left:5%;'>
+											<label for="yes7" style='line-height:25px;'>On</label>
+											<label for="no7" style='line-height:25px;'>Off</label>
+											<span></span>
+										</div>
+									</form>
+								</div>
+							</div>
+							
+							<p style='margin:0px;text-align:left;'>Battery</p>
+							<div class="row items-push" style='margin-bottom:5px;'>
+								<div class="col-md-12" style='width:100%;'>
+									<form action="">
+										<input class='tsops22' name="ops22" id="yes22" value='1' checked="" type="radio" style='display: none;'>
+										<input class='tsops22' name="ops22" id="no22" value='2' type="radio" style='display: none;'>
+										<div class="switch" style='width:120px;height:25px;left:5%;'>
+											<label for="yes22" style='line-height:25px;'>On</label>
+											<label for="no22" style='line-height:25px;'>Off</label>
+											<span></span>
+										</div>
+									</form>
+								</div>
+							</div>
+
+							<p style='margin:0px;text-align:left;'>Canvas</p>
+							<div class="row items-push" style='margin-bottom:5px;'>
+								<div class="col-md-12" style='width:100%;'>
+									<form action="">
+										<input class='tsops5' name="ops5" id="yes5" value='1' checked="" type="radio" style='display: none;'>
+										<input class='tsops5' name="ops5" id="no5" value='2' type="radio" style='display: none;'>
+										<div class="switch" style='width:120px;height:25px;left:5%;'>
+											<label for="yes5" style='line-height:25px;'>On</label>
+											<label for="no5" style='line-height:25px;'>Off</label>
+											<span></span>
+										</div>
+									</form>
+								</div>
+							</div>
+							
+							<p style='margin:0px;text-align:left;'>clientRects</p>
+							<div class="row items-push" style='margin-bottom:5px;'>
+								<div class="col-md-12" style='width:100%;'>
+									<form action="">
+										<input class='tsops19' name="ops19" id="yes19" value='1' checked="" type="radio" style='display: none;'>
+										<input class='tsops19' name="ops19" id="no19" value='2' type="radio" style='display: none;'>
+										<div class="switch" style='width:120px;height:25px;left:5%;'>
+											<label for="yes19" style='line-height:25px;'>On</label>
+											<label for="no19" style='line-height:25px;'>Off</label>
+											<span></span>
+										</div>
+									</form>
+								</div>
+							</div>
+
+							<p style='margin:0px;text-align:left;'>CSS</p>
+							<div class="row items-push" style='margin-bottom:5px;'>
+								<div class="col-md-12" style='width:100%;'>
+									<form action="">
+										<input class='tsops32' name="ops32" id="yes32" value='1' checked="" type="radio" style='display: none;'>
+										<input class='tsops32' name="ops32" id="no32" value='2' type="radio" style='display: none;'>
+										<div class="switch" style='width:120px;height:25px;left:5%;'>
+											<label for="yes32" style='line-height:25px;'>On</label>
+											<label for="no32" style='line-height:25px;'>Off</label>
+											<span></span>
+										</div>
+									</form>
+								</div>
+							</div>
+
+							<p style='margin:0px;text-align:left;'>Date</p>
+							<div class="row items-push" style='margin-bottom:5px;'>
+								<div class="col-md-12" style='width:100%;'>
+									<form action="">
+										<input class='tsops13' name="ops13" id="yes13" value='1' checked="" type="radio" style='display: none;'>
+										<input class='tsops13' name="ops13" id="no13" value='2' type="radio" style='display: none;'>
+										<div class="switch" style='width:120px;height:25px;left:5%;'>
+											<label for="yes13" style='line-height:25px;'>On</label>
+											<label for="no13" style='line-height:25px;'>Off</label>
+											<span></span>
+										</div>
+									</form>
+								</div>
+							</div>
+
+							<p style='margin:0px;text-align:left;'>Encoding</p>
+							<div class="row items-push" style='margin-bottom:5px;'>
+								<div class="col-md-12" style='width:100%;'>
+									<form action="">
+										<input class='tsops8' name="ops8" id="yes8" value='1' checked="" type="radio" style='display: none;'>
+										<input class='tsops8' name="ops8" id="no8" value='2' type="radio" style='display: none;'>
+										<div class="switch" style='width:120px;height:25px;left:5%;'>
+											<label for="yes8" style='line-height:25px;'>On</label>
+											<label for="no8" style='line-height:25px;'>Off</label>
+											<span></span>
+										</div>
+									</form>
+								</div>
+							</div>
+
+							<p style='margin:0px;text-align:left;'>ETag</p>
+							<div class="row items-push" style='margin-bottom:5px;'>
+								<div class="col-md-12" style='width:100%;'>
+									<form action="">
+										<input class='tsops17' name="ops17" id="yes17" value='1' checked="" type="radio" style='display: none;'>
+										<input class='tsops17' name="ops17" id="no17" value='2' type="radio" style='display: none;'>
+										<div class="switch" style='width:120px;height:25px;left:5%;'>
+											<label for="yes17" style='line-height:25px;'>On</label>
+											<label for="no17" style='line-height:25px;'>Off</label>
+											<span></span>
+										</div>
+									</form>
+								</div>
+							</div>
+
+							<p style='margin:0px;text-align:left;'>Fonts</p>
+							<div class="row items-push" style='margin-bottom:5px;'>
+								<div class="col-md-12" style='width:100%;'>
+									<form action="">
+										<input class='tsops10' name="ops10" id="yes10" value='1' checked="" type="radio" style='display: none;'>
+										<input class='tsops10' name="ops10" id="no10" value='2' type="radio" style='display: none;'>
+										<div class="switch" style='width:120px;height:25px;left:5%;'>
+											<label for="yes10" style='line-height:25px;'>On</label>
+											<label for="no10" style='line-height:25px;'>Off</label>
+											<span></span>
+										</div>
+									</form>
+								</div>
+							</div>
+
+							<p style='margin:0px;text-align:left;'>Gamepads</p>
+							<div class="row items-push" style='margin-bottom:5px;'>
+								<div class="col-md-12" style='width:100%;'>
+									<form action="">
+										<input class='tsops23' name="ops23" id="yes23" value='1' checked="" type="radio" style='display: none;'>
+										<input class='tsops23' name="ops23" id="no23" value='2' type="radio" style='display: none;'>
+										<div class="switch" style='width:120px;height:25px;left:5%;'>
+											<label for="yes23" style='line-height:25px;'>On</label>
+											<label for="no23" style='line-height:25px;'>Off</label>
+											<span></span>
+										</div>
+									</form>
+								</div>
+							</div>
+
+						</div>
+						<div class="col-4">
+							<p style='margin:0px;text-align:left;'>Geolocation</p>
+							<div class="row items-push" style='margin-bottom:5px;'>
+								<div class="col-md-12" style='width:100%;'>
+									<form action="">
+										<input class='tsops20' name="ops20" id="yes20" value='1' checked="" type="radio" style='display: none;'>
+										<input class='tsops20' name="ops20" id="no20" value='2' type="radio" style='display: none;'>
+										<div class="switch" style='width:120px;height:25px;left:5%;'>
+											<label for="yes20" style='line-height:25px;'>On</label>
+											<label for="no20" style='line-height:25px;'>Off</label>
+											<span></span>
+										</div>
+									</form>
+								</div>
+							</div>
+
+							<!--
+							<p style='margin:0px;text-align:left;'>Hardware</p>
+							<div class="row items-push" style='margin-bottom:5px;'>
+							<div class="col-md-12" style='width:100%;'>
+								<form action="">
+								<input class='tsops12' name="ops12" id="yes12" value='1' checked="" type="radio" style='display: none;'>
+								<input class='tsops12' name="ops12" id="no12" value='2' type="radio" style='display: none;'>
+								<div class="switch" style='width:120px;height:25px;left:5%;'>
+								<label for="yes12" style='line-height:25px;'>On</label>
+								<label for="no12" style='line-height:25px;'>Off</label>
+								<span></span>
+								</div>
+								</form>
+							</div>
+							</div>
+							-->
+
+							<p style='margin:0px;text-align:left;'>Language</p>
+							<div class="row items-push" style='margin-bottom:5px;'>
+								<div class="col-md-12" style='width:100%;'>
+									<form action="">
+										<input class='tsops14' name="ops14" id="yes14" value='1' checked="" type="radio" style='display: none;'>
+										<input class='tsops14' name="ops14" id="no14" value='2' type="radio" style='display: none;'>
+										<div class="switch" style='width:120px;height:25px;left:5%;'>
+											<label for="yes14" style='line-height:25px;'>On</label>
+											<label for="no14" style='line-height:25px;'>Off</label>
+											<span></span>
+										</div>
+									</form>
+								</div>
+							</div>
+
+							<p style='margin:0px;text-align:left;'>Math</p>
+							<div class="row items-push" style='margin-bottom:5px;'>
+								<div class="col-md-12" style='width:100%;'>
+									<form action="">
+										<input class='tsops31' name="ops31" id="yes31" value='1' checked="" type="radio" style='display: none;'>
+										<input class='tsops31' name="ops31" id="no31" value='2' type="radio" style='display: none;'>
+										<div class="switch" style='width:120px;height:25px;left:5%;'>
+											<label for="yes31" style='line-height:25px;'>On</label>
+											<label for="no31" style='line-height:25px;'>Off</label>
+											<span></span>
+										</div>
+									</form>
+								</div>
+							</div>
+							
+							<p style='margin:0px;text-align:left;'>Memory</p>
+							<div class="row items-push" style='margin-bottom:5px;'>
+								<div class="col-md-12" style='width:100%;'>
+									<form action="">
+										<input class='tsops24' name="ops24" id="yes24" value='1' checked="" type="radio" style='display: none;'>
+										<input class='tsops24' name="ops24" id="no24" value='2' type="radio" style='display: none;'>
+										<div class="switch" style='width:120px;height:25px;left:5%;'>
+											<label for="yes24" style='line-height:25px;'>On</label>
+											<label for="no24" style='line-height:25px;'>Off</label>
+											<span></span>
+										</div>
+									</form>
+								</div>
+							</div>
+							
+							<p style='margin:0px;text-align:left;'>Media</p>
+							<div class="row items-push" style='margin-bottom:5px;'>
+								<div class="col-md-12" style='width:100%;'>
+									<form action="">
+										<input class='tsops25' name="ops25" id="yes25" value='1' checked="" type="radio" style='display: none;'>
+										<input class='tsops25' name="ops25" id="no25" value='2' type="radio" style='display: none;'>
+										<div class="switch" style='width:120px;height:25px;left:5%;'>
+											<label for="yes25" style='line-height:25px;'>On</label>
+											<label for="no25" style='line-height:25px;'>Off</label>
+											<span></span>
+										</div>
+									</form>
+								</div>
+							</div>
+
+							<p style='margin:0px;text-align:left;'>Navigator</p>
+							<div class="row items-push" style='margin-bottom:5px;'>
+								<div class="col-md-12" style='width:100%;'>
+									<form action="">
+										<input class='tsops16' name="ops16" id="yes16" value='1' checked="" type="radio" style='display: none;'>
+										<input class='tsops16' name="ops16" id="no16" value='2' type="radio" style='display: none;'>
+										<div class="switch" style='width:120px;height:25px;left:5%;'>
+											<label for="yes16" style='line-height:25px;'>On</label>
+											<label for="no16" style='line-height:25px;'>Off</label>
+											<span></span>
+										</div>
+									</form>
+								</div>
+							</div>
+							
+							<p style='margin:0px;text-align:left;'>Network</p>
+							<div class="row items-push" style='margin-bottom:5px;'>
+								<div class="col-md-12" style='width:100%;'>
+									<form action="">
+										<input class='tsops26' name="ops26" id="yes26" value='1' checked="" type="radio" style='display: none;'>
+										<input class='tsops26' name="ops26" id="no26" value='2' type="radio" style='display: none;'>
+										<div class="switch" style='width:120px;height:25px;left:5%;'>
+											<label for="yes26" style='line-height:25px;'>On</label>
+											<label for="no26" style='line-height:25px;'>Off</label>
+											<span></span>
+										</div>
+									</form>
+								</div>
+							</div>
+
+							<p style='margin:0px;text-align:left;'>OS</p>
+							<div class="row items-push" style='margin-bottom:5px;'>
+								<div class="col-md-12" style='width:100%;'>
+									<form action="">
+										<input class='tsops11' name="ops11" id="yes11" value='1' checked="" type="radio" style='display: none;'>
+										<input class='tsops11' name="ops11" id="no11" value='2' type="radio" style='display: none;'>
+										<div class="switch" style='width:120px;height:25px;left:5%;'>
+											<label for="yes11" style='line-height:25px;'>On</label>
+											<label for="no11" style='line-height:25px;'>Off</label>
+											<span></span>
+										</div>
+									</form>
+								</div>
+							</div>
+
+							<p style='margin:0px;text-align:left;'>Plugins</p>
+							<div class="row items-push" style='margin-bottom:5px;'>
+								<div class="col-md-12" style='width:100%;'>
+									<form action="">
+										<input class='tsops9' name="ops9" id="yes9" value='1' checked="" type="radio" style='display: none;'>
+										<input class='tsops9' name="ops9" id="no9" value='2' type="radio" style='display: none;'>
+										<div class="switch" style='width:120px;height:25px;left:5%;'>
+											<label for="yes9" style='line-height:25px;'>On</label>
+											<label for="no9" style='line-height:25px;'>Off</label>
+											<span></span>
+										</div>
+									</form>
+								</div>
+							</div>
+
+							<p style='margin:0px;text-align:left;'>Referer</p>
+							<div class="row items-push" style='margin-bottom:5px;'>
+								<div class="col-md-12" style='width:100%;'>
+									<form action="">
+										<input class='tsops15' name="ops15" id="yes15" value='1' checked="" type="radio" style='display: none;'>
+										<input class='tsops15' name="ops15" id="no15" value='2' type="radio" style='display: none;'>
+										<div class="switch" style='width:120px;height:25px;left:5%;'>
+											<label for="yes15" style='line-height:25px;'>On</label>
+											<label for="no15" style='line-height:25px;'>Off</label>
+											<span></span>
+										</div>
+									</form>
+								</div>
+							</div>              
+
+							<p style='margin:0px;text-align:left;'>Screen</p>
+							<div class="row items-push" style='margin-bottom:5px;'>
+								<div class="col-md-12" style='width:100%;'>
+									<form action="">
+										<input class='tsops3' name="ops3" id="yes3" value='1' checked="" type="radio" style='display: none;'>
+										<input class='tsops3' name="ops3" id="no3" value='2' type="radio" style='display: none;'>
+										<div class="switch" style='width:120px;height:25px;left:5%;'>
+											<label for="yes3" style='line-height:25px;'>On</label>
+											<label for="no3" style='line-height:25px;'>Off</label>
+											<span></span>
+										</div>
+									</form>
+								</div>
+							</div>
+
+						</div>
+						<div class="col-4">
+
+							<p style='margin:0px;text-align:left;'>sendBeacon</p>
+							<div class="row items-push" style='margin-bottom:5px;'>
+								<div class="col-md-12" style='width:100%;'>
+									<form action="">
+										<input class='tsops21' name="ops21" id="yes21" value='1' checked="" type="radio" style='display: none;'>
+										<input class='tsops21' name="ops21" id="no21" value='2' type="radio" style='display: none;'>
+										<div class="switch" style='width:120px;height:25px;left:5%;'>
+											<label for="yes21" style='line-height:25px;'>On</label>
+											<label for="no21" style='line-height:25px;'>Off</label>
+											<span></span>
+										</div>
+									</form>
+								</div>
+							</div>
+
+							<p style='margin:0px;text-align:left;'>Speech Voices</p>
+							<div class="row items-push" style='margin-bottom:5px;'>
+								<div class="col-md-12" style='width:100%;'>
+									<form action="">
+										<input class='tsops33' name="ops33" id="yes33" value='1' checked="" type="radio" style='display: none;'>
+										<input class='tsops33' name="ops33" id="no33" value='2' type="radio" style='display: none;'>
+										<div class="switch" style='width:120px;height:25px;left:5%;'>
+											<label for="yes33" style='line-height:25px;'>On</label>
+											<label for="no33" style='line-height:25px;'>Off</label>
+											<span></span>
+										</div>
+									</form>
+								</div>
+							</div>
+
+							<p style='margin:0px;text-align:left;'>Timezone</p>
+							<div class="row items-push" style='margin-bottom:5px;'>
+								<div class="col-md-12" style='width:100%;'>
+									<form action="">
+										<input class='tsops4' name="ops4" id="yes4" value='1' checked="" type="radio" style='display: none;'>
+										<input class='tsops4' name="ops4" id="no4" value='2' type="radio" style='display: none;'>
+										<div class="switch" style='width:120px;height:25px;left:5%;'>
+											<label for="yes4" style='line-height:25px;'>On</label>
+											<label for="no4" style='line-height:25px;'>Off</label>
+											<span></span>
+										</div>
+									</form>
+								</div>
+							</div>
+							
+							<p style='margin:0px;text-align:left;'>Threads</p>
+							<div class="row items-push" style='margin-bottom:5px;'>
+								<div class="col-md-12" style='width:100%;'>
+									<form action="">
+										<input class='tsops27' name="ops27" id="yes27" value='1' checked="" type="radio" style='display: none;'>
+										<input class='tsops27' name="ops27" id="no27" value='2' type="radio" style='display: none;'>
+										<div class="switch" style='width:120px;height:25px;left:5%;'>
+											<label for="yes27" style='line-height:25px;'>On</label>
+											<label for="no27" style='line-height:25px;'>Off</label>
+											<span></span>
+										</div>
+									</form>
+								</div>
+							</div>
+
+							<p style='margin:0px;text-align:left;'>Touchpoints</p>
+							<div class="row items-push" style='margin-bottom:5px;'>
+								<div class="col-md-12" style='width:100%;'>
+									<form action="">
+										<input class='tsops28' name="ops28" id="yes28" value='1' checked="" type="radio" style='display: none;'>
+										<input class='tsops28' name="ops28" id="no28" value='2' type="radio" style='display: none;'>
+										<div class="switch" style='width:120px;height:25px;left:5%;'>
+											<label for="yes28" style='line-height:25px;'>On</label>
+											<label for="no28" style='line-height:25px;'>Off</label>
+											<span></span>
+										</div>
+									</form>
+								</div>
+							</div>
+
+							<p style='margin:0px;text-align:left;'>User Agent</p>
+							<div class="row items-push" style='margin-bottom:5px;'>
+								<div class="col-md-12" style='width:100%;'>
+									<form action="">
+										<input class='tsops1' name="ops1" id="yes1" value='1' checked="" type="radio" style='display: none;'>
+										<input class='tsops1' name="ops1" id="no1" value='2' type="radio" style='display: none;'>
+										<div class="switch" style='width:120px;height:25px;left:5%;'>
+											<label for="yes1" style='line-height:25px;'>On</label>
+											<label for="no1" style='line-height:25px;'>Off</label>
+											<span></span>
+										</div>
+									</form>
+								</div>
+							</div>
+							
+							<p style='margin:0px;text-align:left;'>VRDisplay</p>
+							<div class="row items-push" style='margin-bottom:5px;'>
+								<div class="col-md-12" style='width:100%;'>
+									<form action="">
+										<input class='tsops29' name="ops29" id="yes29" value='1' checked="" type="radio" style='display: none;'>
+										<input class='tsops29' name="ops29" id="no29" value='2' type="radio" style='display: none;'>
+										<div class="switch" style='width:120px;height:25px;left:5%;'>
+											<label for="yes29" style='line-height:25px;'>On</label>
+											<label for="no29" style='line-height:25px;'>Off</label>
+											<span></span>
+										</div>
+									</form>
+								</div>
+							</div>
+
+							<p style='margin:0px;text-align:left;'>WebGL</p>
+							<div class="row items-push" style='margin-bottom:5px;'>
+								<div class="col-md-12" style='width:100%;'>
+									<form action="">
+										<input class='tsops6' name="ops6" id="yes6" value='1' checked="" type="radio" style='display: none;'>
+										<input class='tsops6' name="ops6" id="no6" value='2' type="radio" style='display: none;'>
+										<div class="switch" style='width:120px;height:25px;left:5%;'>
+											<label for="yes6" style='line-height:25px;'>On</label>
+											<label for="no6" style='line-height:25px;'>Off</label>
+											<span></span>
+										</div>
+									</form>
+								</div>
+							</div>
+
+							<p style='margin:0px;text-align:left;'>WebRTC</p>
+							<div class="row items-push" style='margin-bottom:5px;'>
+								<div class="col-md-12" style='width:100%;'>
+									<form action="">
+										<input class='tsops18' name="ops18" id="yes18" value='1' checked="" type="radio" style='display: none;'>
+										<input class='tsops18' name="ops18" id="no18" value='2' type="radio" style='display: none;'>
+										<div class="switch" style='width:120px;height:25px;left:5%;'>
+											<label for="yes18" style='line-height:25px;'>On</label>
+											<label for="no18" style='line-height:25px;'>Off</label>
+											<span></span>
+										</div>
+									</form>
+								</div>
+							</div>
+
+							<p style='margin:0px;text-align:left;'>Worker</p>
+							<div class="row items-push" style='margin-bottom:5px;'>
+								<div class="col-md-12" style='width:100%;'>
+									<form action="">
+										<input class='tsops30' name="ops30" id="yes30" value='1' checked="" type="radio" style='display: none;'>
+										<input class='tsops30' name="ops30" id="no30" value='2' type="radio" style='display: none;'>
+										<div class="switch" style='width:120px;height:25px;left:5%;'>
+											<label for="yes30" style='line-height:25px;'>On</label>
+											<label for="no30" style='line-height:25px;'>Off</label>
+											<span></span>
+										</div>
+									</form>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="js/core/jquery.min.js"></script>
+		<script src="js/core/bootstrap.min.js"></script>
+		<script src="options.min.js"></script>
+	
+	</body>
+</html>
